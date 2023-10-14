@@ -4,13 +4,12 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
-import org.hibernate.Length;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
 
-@Entity (name = "tb_tasks")
+@Entity(name = "tb_tasks")
 public class TaskModel {
   /*
    * usuário
@@ -21,11 +20,11 @@ public class TaskModel {
    * ID
    * Prioridade
    * */
-@Id
-@GeneratedValue (generator = "UUID")
+  @Id
+  @GeneratedValue(generator = "UUID")
   private UUID id;
   private String description;
-  @Column (length = 50)
+  @Column(length = 50)
   private String title;
   private LocalDateTime startAt;
   private LocalDateTime endAt;
@@ -54,7 +53,10 @@ public class TaskModel {
     return title;
   }
 
-  public void setTitle(String title) {
+  public void setTitle(String title) throws Exception {
+    if (title.length() > 50) {
+      throw new Exception("Title must be 50 characters or less.");
+    }
     this.title = title;
   }
 
