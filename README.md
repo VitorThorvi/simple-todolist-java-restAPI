@@ -48,3 +48,4 @@ ___
 # Screenshots
 
 ![Image shows a User being created using the /users/ path to the https://demo-todolist-java-api.onrender.com website. The http method used is POST and the request provides a name, username and a password. The response HTTP code is 201, indicating the user was created, showing the user's id, username, name, hashed password and creation date and time.](https://github.com/VitorThorvi/simple-todolist-java-restAPI/assets/23178734/6523b5fb-ebea-43b5-b6e9-05e07b5d0e66 "User creation through API")
+Image shows a User being created using the /users/ path to the https://demo-todolist-java-api.onrender.com website. The http method used is POST and the request provides a name, username and a password. The response HTTP code is 201, indicating the user was created, showing the user's id, username, name, hashed password and creation date and time
